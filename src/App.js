@@ -61,7 +61,11 @@ export default class App extends Component {
           </div>
         </div>    
         <div className="main-content">
-          <GifList data={this.state.gifs}/>
+        {
+          (this.state.loading)
+          ? <p>Loading...</p>
+          : <GifList data={this.state.gifs}/>
+        }
         </div>
       </div>
     );
